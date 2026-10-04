@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#14141c" />
+  <title>A gift for Nooby 🎁</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-stars" aria-hidden="true"></div>
+
+  <main class="page-shell">
+    <section class="intro" id="intro">
+      <p class="eyebrow">SPECIAL DELIVERY</p>
+      <h1>A little something arrived for <span id="recipientName">Nooby</span>…</h1>
+      <p class="subtitle">
+        Tear the wrapping paper open. One tear definitely won’t be enough.
+      </p>
+    </section>
+
+    <section class="gift-stage" id="giftStage" aria-label="Interactive birthday present">
+      <div class="glow glow-one"></div>
+      <div class="glow glow-two"></div>
+
+      <div class="gift-card" id="giftCard">
+        <div class="gift-inner" id="giftInner">
+          <div class="reveal-panel">
+            <div class="sparkle-ring" aria-hidden="true">
+              <span>✦</span><span>✧</span><span>✦</span><span>✧</span>
+            </div>
+
+            <div class="gem" aria-hidden="true">
+              <div class="gem-core"></div>
+            </div>
+
+            <p class="reveal-kicker">HAPPY BIRTHDAY!</p>
+            <h2><span id="revealName">Nooby</span>, you got</h2>
+
+            <div class="reward-amount">
+              <span id="primogemAmount">6,480</span>
+              <small>PRIMOGEMS</small>
+            </div>
+
+            <p class="birthday-message" id="birthdayMessage">
+              I know you like opening things, so obviously I couldn’t just give you your present normally.
+            </p>
+
+            <button class="claim-button" id="claimButton" type="button">
+              Claim gift ✨
+            </button>
+
+            <p class="claim-result" id="claimResult" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <canvas id="paperCanvas" aria-label="Wrapping paper. Drag across it to tear it open."></canvas>
+
+        <div class="ribbon ribbon-vertical" aria-hidden="true"></div>
+        <div class="ribbon ribbon-horizontal" aria-hidden="true"></div>
+
+        <div class="bow" id="bow" aria-hidden="true">
+          <span class="bow-loop bow-left"></span>
+          <span class="bow-knot"></span>
+          <span class="bow-loop bow-right"></span>
+        </div>
+      </div>
+
+      <div class="tear-ui" id="tearUi">
+        <div class="tear-copy">
+          <strong id="tearPrompt">Drag across the present to tear the paper</strong>
+          <span id="tearStatus">Tears: 0 / 6</span>
+        </div>
+
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <p class="hint" id="hint">Mouse: click + drag • Phone/tablet: drag your finger</p>
+    </section>
+  </main>
+
+  <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
